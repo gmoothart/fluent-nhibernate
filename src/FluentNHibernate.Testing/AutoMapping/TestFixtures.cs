@@ -408,6 +408,16 @@ namespace FluentNHibernate.Automapping.TestFixtures.CustomCompositeTypes
         {
             return DeepCopy(original);
         }
+
+        #region ICompositeUserType Members
+
+
+        public void NullSafeSet(IDbCommand cmd, object value, int index, bool[] settable, ISessionImplementor session)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
     }
 }
 
